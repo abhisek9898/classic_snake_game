@@ -259,8 +259,11 @@ const App = () => {
     <Container className="App" fluid>
       <Helmet>
         <meta charSet="utf-8" />
-        <title>Classical Snake Game</title>
-        <link rel="canonical" href="https://snake.motasimfoad.com/" />
+        <title>Snake Game</title>
+        <link
+          rel="canonical"
+          href="https://classic-snake-game-one.vercel.app/"
+        />
         <meta
           name="description"
           content="Classical Retro snake game built using ReactJS"
@@ -270,6 +273,21 @@ const App = () => {
         <Col role="button" tabIndex="0" onKeyDown={(e) => moveSnake(e)} xl={7}>
           <div>
             <div className="game-board">
+              <a
+                style={{
+                  paddingLeft: "10%",
+                  fontSize: "20px",
+                  color: "black",
+                  textDecoration: "none",
+                  fontWeight: "bold",
+                  textShadow: "1px 1px black",
+                }}
+                href="https://github.com/abhisek9898"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Abhisek Malla
+              </a>
               <br />
               {gameOver ? (
                 <h1 style={{ marginLeft: "15%", color: "orange" }}>
@@ -280,7 +298,7 @@ const App = () => {
               )}
               <div className="canvasContainer">
                 <canvas
-                  style={{ marginTop: "10px", border: "1px dotted black" }}
+                  style={{ marginTop: "1px", border: "1px dotted black" }}
                   ref={canvasRef}
                   width={`${CANVAS_SIZE[0]}px`}
                   height={`${CANVAS_SIZE[1]}px`}
@@ -312,19 +330,7 @@ const App = () => {
                     Snake Size : <strong>{snake.length}</strong>
                   </p>
                 </div>
-                <br />
-                <br /> <br />
-                <br />
               </div>
-
-              <a
-                style={{ paddingLeft: "50%" }}
-                href="https://motasimfoad.com"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                (C) Motasim Foad
-              </a>
             </div>
             <Toast
               style={{
